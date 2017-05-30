@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ data.get('title') }}</title>
+
+
+    <link rel="stylesheet" type="text/csss" href="{{ static_url("css/bootstrap.min.css") }}">
+    <link rel="stylesheet" type="text/csss" href="{{ static_url("css/style.css") }}">
+    <script src="{{ static_url("js/jquery.min.js") }}"></script>
+    <script src="{{ static_url("js/bootstrap.min.js") }}"></script>
+    <script src="{{ static_url("js/scripts.js") }}"></script>
+
+  </head>
+  <body>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- 以下是中间左侧栏 -->
+        <div class="col-md-2">
+        </div>
+        
+        <!-- 以下是中间右侧栏 -->
+        <div class="col-md-8">
+            <h2>
+                <a href="{{ data.get('url') }}" target="_blank">{{ data.get('title') }}</a>
+            </h2>
+            <blockquote>
+                <p>
+                    发布时间
+                </p> <small> {{ data.get('publish_time') }} <cite>{{ data.get('created_at') }}</cite></small>
+            </blockquote>
+            {% raw data.get('content') %}
+        </div>
+
+        <div class="col-md-2">
+        </div>
+    </div>
+</div>
+
+  </body>
+</html>

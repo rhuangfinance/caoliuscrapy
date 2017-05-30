@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block body %}{% end %}
+{% block body %}
+    <hr />
+    <ul>
+        {% for data in datas %}
+            <li><a href="{{ reverse_url('cat', data.cat_id) }}" target="_blank">{{ data.cat_id }} {{ data.cat_desc }}</a></li>
+        {% end %}
+    </ul>
+    <hr />
+{% end %}

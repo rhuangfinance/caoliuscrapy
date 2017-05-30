@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+    <link rel="stylesheet" href="{{ static_url("css/bootstrap.min.css") }}">
+    <link rel="stylesheet" href="{{ static_url("css/base.css") }}">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<form class="navbar-form navbar-left" method="get" action="/search" role="search">
+    <div class="form-group">
+        <input type="text" name="q" class="form-control" placeholder="xxx">
+    </div>
+    <button type="submit" class="btn btn-info">Go!</button>
+</form>
+
+{% block body %}{% end %}
+
+<script src="{{ static_url("js/jquery-1.11.3.min.js") }}"></script>
+<script scr="{{ static_url("js/bootstrap.min.js") }}"></script>
+</body>
+</html>

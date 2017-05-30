@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block body %}{% end %}
+{% block body %}
+    <ul>
+        <li><a href="{{ reverse_url('search') }}?page={{ datas.get('prev_page')}}&q={{ datas.get('keyword') }}">上一页</a></li>
+        <li>{{ datas.get('current_page') }}</li>
+        <li><a href="{{ reverse_url('search') }}?page={{ datas.get('next_page')}}&q={{ datas.get('keyword') }}">下一页</a></li>
+    </ul>
+    <hr />
+    <table class="table table-condensed table-hover">
+        <thead>
+            <tr>
+                <th>日期</th>
+                <th>作者</th>
+                <th>分类</th>
+                <th>标题</th>
+                <th>最后回复</th>
+                <th>回复数</th>
+                <th>数据更新日期</th>
+            </tr>
+        </thead>
+        {% for data in datas['datas'] %}
+            <tbody>
+                <tr>
+                    <td>{{ data.get('post_date') }}</td>
+                    <td>{{ data.get('author') }}</td>
+                    <td>{{ data.get('cat_desc') }}</td>
+                    <td><a href="{{ data.get('uri') }}" target="_blank">{{ data.get('title') }}</a></td>
+                    <td>{{ data.get('last_reply_time') }}</td>
+                    <td>{{ data.get('reply_num') }}</td>
+                    <td>{{ data.get('updated_at') }}</td>
+                </tr>
+            </tbody>
+        {% end %}
+    </table>
+    <hr />
+    <ul>
+        <li><a href="{{ reverse_url('search') }}?page={{ datas.get('prev_page')}}&q={{ datas.get('keyword') }}">上一页</a></li>
+        <li>{{ datas.get('current_page') }}</li>
+        <li><a href="{{ reverse_url('search') }}?page={{ datas.get('next_page')}}&q={{ datas.get('keyword') }}">下一页</a></li>
+    </ul>
+
+{% end %}

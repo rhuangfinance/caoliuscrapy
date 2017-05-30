@@ -21,6 +21,10 @@ web 展示中，写死了用户名 daixiepython.com 字段值。输入即可登�
 
 运行爬虫程序，在 caoliu 目录下，python runspider.py 即可。
 
+#### 效果图
+
+![](http://wx3.sinaimg.cn/large/92f3355cgy1fg3irsclz7j20u30lf42y.jpg)
+
 
 #### 其他
 
